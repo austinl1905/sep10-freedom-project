@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&family=Ubuntu&display=swap");
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 0;
+  margin: 0;
+}
+
+.header, .footer {
+  grid-row: 1/2;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3C647D;
+  margin-bottom: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../imgs/underwater.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading-1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Fjalla One", sans-serif;
+  color: white;
+  font-size: 64px;
+}
+
+.content {
+  grid-row: 3/4;
+}
+
+.footer {
+  grid-row: 4/5;
+  height: 250px;
+  background-image: none;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
