@@ -2,16 +2,17 @@
 @import 'fonts';
 @import 'colors';
 
-@mixin content-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 $alignment-1: center;
 
-$heights: ("header": 500px);
+$heights: ("footer": 250px);
 $widths: ("full": 100%);
 $margins: ("top": 100px);
+$center: 0 auto 0 auto;
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 body {
     display: grid;
@@ -22,21 +23,28 @@ body {
 
 .header {
     grid-row: 1/2;
-    height: map.get($heights, "header");
+    height: 100vh;
     width: map.get($widths, "full");
     display: flex;
     align-items: $alignment-1;
     justify-content: $alignment-1;
-    background-color: map.get($background-colors, "Blue", "Dark");
     margin-bottom: map.get($margins, "top");
     @include gradient;
 }
 
 .heading-1 {
-    @include content-center;
     font-family: $font-1;
     color: white;
     font-size: $font-size-large;
+    margin: $center;
+    animation: fadein 2s;
+}
+
+.heading-2 {
+    @extend .heading-1;
+    font-family: $font-2;
+    font-size: $font-size-medium;
+    animation: fadein 3s;
 }
 
 .content {
@@ -46,7 +54,8 @@ body {
 .footer {
     @extend .header;
     grid-row: 4/5;
-    height: calc(map.get($heights, "header") * 0.5);
+    height: map.get($heights, "footer");
     background-image: none;
     margin-bottom: 0;
+    background-color: map.get($background-colors, "Blue", "Dark");
 }

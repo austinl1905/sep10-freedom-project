@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&family=Ubuntu&display=swap");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
@@ -8,25 +16,30 @@ body {
 
 .header, .footer {
   grid-row: 1/2;
-  height: 500px;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3C647D;
   margin-bottom: 100px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../imgs/underwater.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/../imgs/underwater.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.heading-1 {
-  margin-left: auto;
-  margin-right: auto;
+.heading-1, .heading-2 {
   font-family: "Fjalla One", sans-serif;
   color: white;
   font-size: 64px;
+  margin: 0 auto 0 auto;
+  animation: fadein 2s;
+}
+
+.heading-2 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 32px;
+  animation: fadein 3s;
 }
 
 .content {
@@ -38,6 +51,7 @@ body {
   height: 250px;
   background-image: none;
   margin-bottom: 0;
+  background-color: #3C647D;
 }
 
 /*# sourceMappingURL=style.css.map */
