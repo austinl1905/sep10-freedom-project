@@ -9,7 +9,7 @@ $alignments: (
 );
 
 $heights: ("footer": 250px);
-$widths: ("full": 100%);
+$widths: ("full": 100%, "xlarge": 90%);
 $margins: ("top": 100px);
 $center: 0 auto 0 auto;
 
@@ -38,6 +38,7 @@ body {
     @media screen and (max-width: 1164px) {
         display: grid;
         justify-content: map.get($alignments, "default");
+        justify-items: map.get($alignments, "center");
     }
 }
 
@@ -46,7 +47,9 @@ body {
     color: white;
     font-size: $font-size-large;
     margin: $center;
+    text-align: map.get($alignments, "center");
     animation: fadein 2s;
+    max-width: map.get($widths, "xlarge");
 }
 
 .heading-2 {

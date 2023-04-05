@@ -31,6 +31,7 @@ body {
   .header, .footer {
     display: grid;
     justify-content: stretch;
+    justify-items: center;
   }
 }
 
@@ -39,7 +40,9 @@ body {
   color: white;
   font-size: 64px;
   margin: 0 auto 0 auto;
+  text-align: center;
   animation: fadein 2s;
+  max-width: 90%;
 }
 
 .heading-2 {
