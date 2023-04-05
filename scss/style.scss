@@ -10,7 +10,16 @@ $alignments: (
 
 $heights: ("footer": 250px);
 $widths: ("full": 100%, "xlarge": 90%);
-$margins: ("top": 100px);
+$box: (
+    "margins": (
+        "top": 100px
+    ),
+
+    "borders": (
+        "radius": 5px
+    )
+);
+
 $center: 0 auto 0 auto;
 
 @keyframes fadein {
@@ -32,7 +41,7 @@ body {
     display: flex;
     align-items: map.get($alignments, "center");
     justify-content: map.get($alignments, "spaceeven");
-    margin-bottom: map.get($margins, "top");
+    margin-bottom: map.get($box, "margins", "top");
     @include gradient;
 
     @media screen and (max-width: 1164px) {
@@ -64,6 +73,12 @@ body {
     font-family: $font-3;
     font-size: $font-size-small;
     animation: none;
+}
+
+.anchor-text {
+    @extend .paragraph-text;
+    color: black;
+    text-decoration: none;
 }
 
 .content {

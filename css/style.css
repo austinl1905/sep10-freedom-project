@@ -35,7 +35,7 @@ body {
   }
 }
 
-.heading-1, .paragraph-text, .heading-2 {
+.heading-1, .paragraph-text, .anchor-text, .heading-2 {
   font-family: "Fjalla One", sans-serif;
   color: white;
   font-size: 64px;
@@ -51,10 +51,15 @@ body {
   animation: fadein 4s;
 }
 
-.paragraph-text {
+.paragraph-text, .anchor-text {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   animation: none;
+}
+
+.anchor-text {
+  color: black;
+  text-decoration: none;
 }
 
 .content {
@@ -67,6 +72,11 @@ body {
   background-image: none;
   margin-bottom: 0;
   background-color: #3C647D;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
