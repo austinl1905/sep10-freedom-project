@@ -2,7 +2,11 @@
 @import 'fonts';
 @import 'colors';
 
-$alignment-1: center;
+$alignments: (
+    "center": center,
+    "spaceeven": space-evenly,
+    "default": stretch
+);
 
 $heights: ("footer": 250px);
 $widths: ("full": 100%);
@@ -26,10 +30,15 @@ body {
     height: 100vh;
     width: map.get($widths, "full");
     display: flex;
-    align-items: $alignment-1;
-    justify-content: $alignment-1;
+    align-items: map.get($alignments, "center");
+    justify-content: map.get($alignments, "spaceeven");
     margin-bottom: map.get($margins, "top");
     @include gradient;
+
+    @media screen and (max-width: 1164px) {
+        display: grid;
+        justify-content: map.get($alignments, "default");
+    }
 }
 
 .heading-1 {
@@ -44,7 +53,7 @@ body {
     @extend .heading-1;
     font-family: $font-2;
     font-size: $font-size-medium;
-    animation: fadein 3s;
+    animation: fadein 4s;
 }
 
 .content {
