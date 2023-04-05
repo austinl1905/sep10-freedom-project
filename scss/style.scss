@@ -77,7 +77,6 @@ body {
 
 .anchor-text {
     @extend .paragraph-text;
-    color: black;
     text-decoration: none;
 }
 
@@ -92,4 +91,9 @@ body {
     background-image: none;
     margin-bottom: 0;
     background-color: map.get($background-colors, "Blue", "Dark");
+    justify-content: map.get($alignments, "center");
+}
+
+.btn {
+    margin: $center;
 }
