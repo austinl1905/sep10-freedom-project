@@ -9,7 +9,7 @@ $alignments: (
 );
 
 $heights: ("footer": 250px);
-$widths: ("full": 100%, "xlarge": 90%);
+$widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%);
 $box: (
     "margins": (
         "top": 100px
@@ -41,7 +41,6 @@ body {
     display: flex;
     align-items: map.get($alignments, "center");
     justify-content: map.get($alignments, "spaceeven");
-    margin-bottom: map.get($box, "margins", "top");
     @include gradient;
 
     @media screen and (max-width: 1164px) {
@@ -58,7 +57,7 @@ body {
     margin: $center;
     text-align: map.get($alignments, "center");
     animation: fadein 2s;
-    max-width: map.get($widths, "xlarge");
+    max-width: map.get($widths, "xxlarge");
 }
 
 .heading-2 {
@@ -88,13 +87,36 @@ body {
 
 .scrolldiv {
     grid-column: 2/3;
+    width: map.get($widths, "full");
     background-color: map.get($background-colors, "Blue", "Light");
     overflow-y: scroll;
 }
 
 .verticalnav {
-    grid-column: 1/2;
+    @extend .scrolldiv;
     overflow-y: hidden;
+    grid-column: 1/2;
+    background-color: map.get($background-colors, "Black", "Medium");
+}
+
+.nav-items {
+    list-style-type: none;
+    margin-top: calc(map.get($box, "margins", "top") * 0.2);
+    margin: $center;
+    overflow-x: hidden;
+}
+
+.nav-item {
+    margin: $center;
+    padding: map.get($box, "borders", "radius");
+}
+
+.nav-anchor-text {
+    text-overflow: ellipsis;
+    whitespace: nowrap;
+    &:hover {
+        font-size: calc($font-size-small * 1.2);
+    }
 }
 
 .footer {
