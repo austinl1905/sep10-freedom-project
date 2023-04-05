@@ -59,6 +59,13 @@ body {
     animation: fadein 4s;
 }
 
+.paragraph-text {
+    @extend .heading-1;
+    font-family: $font-3;
+    font-size: $font-size-small;
+    animation: none;
+}
+
 .content {
     grid-row: 3/4;
 }
