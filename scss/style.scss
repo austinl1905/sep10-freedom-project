@@ -82,6 +82,19 @@ body {
 
 .content {
     grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+
+.scrolldiv {
+    grid-column: 2/3;
+    background-color: map.get($background-colors, "Blue", "Light");
+    overflow-y: scroll;
+}
+
+.verticalnav {
+    grid-column: 1/2;
+    overflow-y: hidden;
 }
 
 .footer {
@@ -91,7 +104,6 @@ body {
     background-image: none;
     margin-bottom: 0;
     background-color: map.get($background-colors, "Blue", "Dark");
-    justify-content: map.get($alignments, "center");
 }
 
 .btn {

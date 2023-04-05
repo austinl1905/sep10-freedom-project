@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: 100px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/../imgs/underwater.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../imgs/underwater.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,6 +63,19 @@ body {
 
 .content {
   grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+.scrolldiv {
+  grid-column: 2/3;
+  background-color: #78C8FA;
+  overflow-y: scroll;
+}
+
+.verticalnav {
+  grid-column: 1/2;
+  overflow-y: hidden;
 }
 
 .footer {
@@ -71,7 +84,6 @@ body {
   background-image: none;
   margin-bottom: 0;
   background-color: #3C647D;
-  justify-content: center;
 }
 
 .btn {
