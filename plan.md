@@ -9,11 +9,12 @@
 ### MVP
 
 - Simple cards for current and future innovations (boring grid style)
-- Working & responsive nav
+- Working & responsive nav using bootstrap
 - Typography
 - Colors
 - Desktop responsiveness
 - Mobile responsiveness
+- boring generic bootstrap components
 
 
 ### Beyond MVP (the cool stuff)
@@ -21,6 +22,7 @@
 - Card timeline thingy that uses keyframes and maybe JS to fade in on scroll
 - Cool hero (Done!!!!)
 - maybe hide a cat picture here and there
+- maybe my own components
 
 ## Timeline
 
@@ -30,4 +32,8 @@
 
 4.6 - nav and cards, clean up code
 
-4.7 - beyond mvp maybe
+4.8 - card for future innovation
+
+4.8 - mobile responsiveness (I kind of do this along the way though)
+
+4.9 - beyond mvp maybe? (I can totally get all of this done in less than a month)
