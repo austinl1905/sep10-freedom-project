@@ -42,11 +42,21 @@ body {
   text-align: center;
   animation: fadein 2s;
 }
+@media screen and (max-width: 414px) {
+  .heading-1, .paragraph-text, .anchor-text, .heading-2 {
+    font-size: 9vw;
+  }
+}
 
 .heading-2 {
   font-family: "Noto Sans", sans-serif;
   font-size: 32px;
   animation: fadein 4s;
+}
+@media screen and (max-width: 414px) {
+  .heading-2 {
+    font-size: 6vw;
+  }
 }
 
 .paragraph-text, .anchor-text {
@@ -61,22 +71,12 @@ body {
 
 .content {
   grid-row: 3/4;
-  display: grid;
-  grid-template-columns: 2fr 8fr;
 }
 
-.scrolldiv, .verticalnav {
-  grid-column: 2/3;
+.scrolldiv {
   width: 100%;
   background-color: #78C8FA;
   overflow-y: scroll;
-}
-
-.verticalnav {
-  overflow-y: hidden;
-  grid-column: 1/2;
-  background-color: #969696;
-  min-width: 150px;
 }
 
 .nav-items {

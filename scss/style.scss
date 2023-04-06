@@ -58,6 +58,10 @@ body {
     text-align: map.get($alignments, "center");
     animation: fadein 2s;
     max-width: map.get($widths, "xxlarge");
+
+    @media screen and (max-width: 414px) {
+        font-size: 9vw;
+    }
 }
 
 .heading-2 {
@@ -65,6 +69,10 @@ body {
     font-family: $font-2;
     font-size: $font-size-medium;
     animation: fadein 4s;
+
+    @media screen and (max-width: 414px) {
+        font-size: 6vw;
+    }
 }
 
 .paragraph-text {
@@ -81,23 +89,12 @@ body {
 
 .content {
     grid-row: 3/4;
-    display: grid;
-    grid-template-columns: 2fr 8fr;
 }
 
 .scrolldiv {
-    grid-column: 2/3;
     width: map.get($widths, "full");
     background-color: map.get($background-colors, "Blue", "Light");
     overflow-y: scroll;
-}
-
-.verticalnav {
-    @extend .scrolldiv;
-    overflow-y: hidden;
-    grid-column: 1/2;
-    background-color: map.get($background-colors, "Black", "Medium");
-    min-width: 150px;
 }
 
 .nav-items {
