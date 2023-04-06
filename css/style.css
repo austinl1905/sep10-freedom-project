@@ -76,6 +76,7 @@ body {
   overflow-y: hidden;
   grid-column: 1/2;
   background-color: #969696;
+  min-width: 150px;
 }
 
 .nav-items {
@@ -88,13 +89,11 @@ body {
 .nav-item {
   margin: 0 auto 0 auto;
   padding: 5px;
-}
-
-.nav-anchor-text {
-  max-width: 250px;
   text-overflow: ellipsis;
   whitespace: nowrap;
+  display: block;
 }
+
 .nav-anchor-text:hover {
   font-size: 19.2px;
 }
@@ -107,8 +106,12 @@ body {
   background-color: #3C647D;
 }
 
-.btn {
+.button {
   margin: 0 auto 0 auto;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

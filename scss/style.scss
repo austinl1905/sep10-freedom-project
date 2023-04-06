@@ -97,6 +97,7 @@ body {
     overflow-y: hidden;
     grid-column: 1/2;
     background-color: map.get($background-colors, "Black", "Medium");
+    min-width: 150px;
 }
 
 .nav-items {
@@ -109,11 +110,13 @@ body {
 .nav-item {
     margin: $center;
     padding: map.get($box, "borders", "radius");
+    text-overflow: ellipsis;
+    whitespace: nowrap;
+    display: block;
 }
 
 .nav-anchor-text {
-    text-overflow: ellipsis;
-    whitespace: nowrap;
+
     &:hover {
         font-size: calc($font-size-small * 1.2);
     }
@@ -128,6 +131,10 @@ body {
     background-color: map.get($background-colors, "Blue", "Dark");
 }
 
-.btn {
+.button {
     margin: $center;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: map.get($box, "borders", "radius");
+    padding: map.get($box, "borders", "radius");
 }
