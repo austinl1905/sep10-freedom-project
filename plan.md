@@ -25,6 +25,8 @@ These are just the wireframes for the MVP. The final website could end up lookin
 - Cool hero (Done!!!!)
 - maybe hide a cat picture here and there
 - maybe my own components
+- vertical navbar? (everytime I try to do this I fail because I can't figure out how to make it responsive :sob:)
+- sass modules for some cool dark magic esque preprocessing stuff
 
 ## Timeline
 
@@ -34,7 +36,7 @@ These are just the wireframes for the MVP. The final website could end up lookin
 
 4.6 - nav and cards, clean up code
 
-4.8 - card for future innovation
+4.7 - card for future innovation
 
 4.8 - mobile responsiveness (I kind of do this along the way though)
 
