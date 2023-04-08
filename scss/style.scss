@@ -2,21 +2,30 @@
 @import 'fonts';
 @import 'colors';
 
+* {
+    font-family: $font-3;
+}
+
 $alignments: (
     "center": center,
     "spaceeven": space-evenly,
-    "default": stretch
+    "default": stretch,
+    "left": left
 );
 
 $heights: ("footer": 250px);
 $widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%);
 $box: (
     "margins": (
-        "top": 100px
+        "med": 100px
     ),
 
     "borders": (
         "radius": 5px
+    ),
+
+    "gaps": (
+        "col": 35px
     )
 );
 
@@ -82,23 +91,76 @@ nav {
 .paragraph-text {
     @extend .heading-1;
     font-family: $font-3;
-    font-size: $font-size-small;
+    font-size: 0.8rem;
     animation: none;
+    margin: 0;
+}
+
+.footer-text {
+    @extend .paragraph-text;
+    margin: $center;
 }
 
 .anchor-text {
     @extend .paragraph-text;
     text-decoration: none;
+    margin: $center;
 }
 
 .content {
     grid-row: 3/4;
+    background-color: map.get($background-colors, "Blue", "Light");
 }
 
-.scrolldiv {
-    width: map.get($widths, "full");
-    background-color: map.get($background-colors, "Blue", "Light");
-    overflow-y: scroll;
+.part-a {
+    max-width: map.get($widths, "xllarge");
+    margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+}
+
+.timeline-heading {
+    font-family: $font-1;
+    @include timeline-header-style;
+    text-align: map.get($alignments, "left");
+}
+
+.timeline-item {
+	padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+	border-left: 2px solid $border-color;
+
+	p {
+		font-size: 1rem;
+	}
+
+	&::before {
+		content: attr(field);
+		position: absolute;
+		left: 2em;
+		font-weight: bold;
+		top: 1em;
+		display: block;
+		font-family: $font-4;
+		font-weight: 700;
+		font-size: .785rem;
+	}
+
+	&::after {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $border-color;
+		background: white;
+	}
+
+	&:last-child {
+		border-image: $nth-child-gradient;
+	}
 }
 
 .footer {

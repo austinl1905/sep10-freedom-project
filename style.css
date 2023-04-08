@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&family=Ubuntu&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   font-family: "Ubuntu", sans-serif;
 }
@@ -39,7 +38,7 @@ body {
   }
 }
 
-.heading-1, .paragraph-text, .anchor-text, .footer-text, .heading-2 {
+.heading-1, .paragraph-text, .anchor-text, .heading-2 {
   font-family: "Fjalla One", sans-serif;
   color: white;
   font-size: 64px;
@@ -48,7 +47,7 @@ body {
   animation: fadein 2s;
 }
 @media screen and (max-width: 414px) {
-  .heading-1, .paragraph-text, .anchor-text, .footer-text, .heading-2 {
+  .heading-1, .paragraph-text, .anchor-text, .heading-2 {
     font-size: 9vw;
   }
 }
@@ -68,20 +67,14 @@ nav {
   grid-row: 2/3;
 }
 
-.paragraph-text, .anchor-text, .footer-text {
+.paragraph-text, .anchor-text {
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.8rem;
+  font-size: 16px;
   animation: none;
-  margin: 0;
-}
-
-.footer-text {
-  margin: 0 auto 0 auto;
 }
 
 .anchor-text {
   text-decoration: none;
-  margin: 0 auto 0 auto;
 }
 
 .content {
@@ -90,51 +83,10 @@ nav {
 }
 
 .part-a {
-  max-width: 90%;
-  margin: 100px auto 100px auto;
-}
-
-.timeline-heading {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.5em;
-  text-align: left;
-}
-
-.timeline-item {
-  padding: 3em 2em 2em;
-  position: relative;
-  color: rgba(0, 0, 0, 0.7);
-  border-left: 2px solid rgba(0, 0, 0, 0.3);
-}
-.timeline-item p {
-  font-size: 1rem;
-}
-.timeline-item::before {
-  content: attr(field);
-  position: absolute;
-  left: 2em;
-  font-weight: bold;
-  top: 1em;
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 0.785rem;
-}
-.timeline-item::after {
-  width: 10px;
-  height: 10px;
-  display: block;
-  top: 1em;
-  position: absolute;
-  left: -7px;
-  border-radius: 10px;
-  content: "";
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background: white;
-}
-.timeline-item:last-child {
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+  display: grid;
+  grid-template: repeat(5, auto)/1fr 30px 1fr;
+  column-gap: 50px;
+  margin: 100px 0 100px 0;
 }
 
 .footer {
