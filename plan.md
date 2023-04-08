@@ -6,7 +6,7 @@
 
 [Desktop](https://wireframe.cc/PPbfG5)
 
-These are just the wireframes for the MVP. The final website could end up looking vastly different.
+These are just the wireframes for the MVP. The final website could end up looking vastly different. (Spoiler alert: it does)
 
 ### MVP
 
