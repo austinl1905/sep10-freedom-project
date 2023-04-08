@@ -21,26 +21,72 @@
                         %li.nav-item
                             %a.active.nav-link.anchor-text{:aria => "page", :href => "#header"}Top
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#"}Current Innovations
+                            %a.nav-link.anchor-text{:href => "#part-a"}Current Innovations
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#"}Future Innovations
+                            %a.nav-link.anchor-text{:href => "#part-b"}Future Innovations
         .content
-            .part-a
+            .part-a#part-a
                 .timeline-item{:field => "Data"}
                     %h1.timeline-heading Distributed Oceanographic Data System (DODS)
-                    %p.paragraph-text
+                    %ul
+                        %li
+                            %p.paragraph-text Data networking software that makes it easier to acquire, collect, and share information.
+                        %li
+                            %p.paragraph-text Software that was originally used by oceanographers but now is open source for general use.
+                        %li
+                            %p.paragraph-text Helps different ocean observatories share disparate data and important observations.
+                        %li
+                            %p.paragraph-text Makes data accessible to remote locations regardless of storage formats through the use of WWW browsers.
+                        %li
+                            %p.paragraph-text Used by large organizations such as NASA and NOAA to help store historical data, satellite imagery, and real time oceanographic data recorded by ocean observing systems.
                 .timeline-item{:field => "Acoustical Oceanography"}
                     %h1.timeline-heading Sonar
-                    %p.paragraph-text
+                    %ul
+                        %li
+                            %p.paragraph-text Sonar (Sound navigation and ranging) is a technique that uses devices in order to detect sound and movement in the ocean.
+                        %li
+                            %p.paragraph-text Sonars will determine the time it takes for an echo to bounce off of an underwater object and return to the source of the sound.
+                        %li
+                            %p.paragraph-text Depends highly on the environment (e.g. temperature, salinity, hydrostatic pressure).
+                        %li
+                            %p.paragraph-text Used by oceanographers for ocean navigation and mapping the seafloor.
                 .timeline-item{:field => "Physical Oceanography"}
                     %h1.timeline-heading Ocean Remote Sensing
-                    %p.paragraph-text
+                    %ul
+                        %li
+                            %p.paragraph-text Remote sensing is able to measure the physical characteristics of an area, in this case the ocean floor, without directly contacting it.
+                        %li
+                            %p.paragraph-text There are two types of remote sensing used in oceanography, remote sensing and electromagnetic sensing.
+                        %li
+                            %p.paragraph-text Remote sensing is used by marine scientists to make large scale measurements in areas that would be too expensive to map with conventional measurements. For this reason it is an extremely important tool for mapping the ocean floor.
+                        %li
+                            %p.paragraph-text Can also be used to record the temperature and the salinity of the ocean
+                        %li
+                            %p.paragraph-text Data collected by these tools can be processed with remote sensing software to generate information from sensors
                 .timeline-item{:field => "Physical Oceanography"}
                     %h1.timeline-heading TowCam
-                    %p.paragraph-text
+                    %ul
+                        %li
+                            %p.paragraph-text The TowCam is a camera that fulfills oceanographer’s needs for an imaging and sampling system. It is an internally recording deep-sea camera system that is capable of operating in nearly any condition.
+                        %li
+                            %p.paragraph-text The TowCam has many purposes, such as sampling the seabed of ocean ridge crests, surveying for deep-sea mapping, and sampling for geologists, biologists, chemists, and other researchers. It is accurate and efficient at what it does, making it very useful for interdisciplinary research and studies.
+                        %li
+                            %p.paragraph-text The camera allows for real-time acquisition of depth and altitude which is useful for making very accurate topographic maps of the seafloor.
+                        %li
+                            %p.paragraph-text The camera is able to withstand high hydrostatic pressure and contact with the ocean bottom. This allows it to take water samples at a depth.
+                        %li
+                            %p.paragraph-text After each “tow”, the data is immediately processed and is ready to be analyzed and configured. This makes the data very easy to review and upload.
                 .timeline-item{:field => "Fishing"}
                     %h1.timeline-heading MOCNESS
-                    %p.paragraph-text
+                    %ul
+                        %li
+                            %p.paragraph-text MOCNESS can control 6-20 nets at a time, and it is pulled by a research ship that carries the data collected. This way scientists can control the depth and measure a precise area of water.
+                        %li
+                            %p.paragraph-text Plankton collected is swept into a “cod end”, where samples can be analyzed or preserved.
+                        %li
+                            %p.paragraph-text With the MOCNESS scientists are able to observe details of water and plankton in ocean currents that would otherwise be difficult to measure, such as the edges of the Gulf Stream and California Current. With real time data feeds and commands, it becomes very easy to collect many samples, saving research funds and time.
+                        %li
+                            %p.paragraph-text However, the MOCNESS still has limitations. It can only be used in open waters, requiring different devices for the ocean floor or reefs. The net also tends to move slowly, allowing some larger planktons to escape.
 
         .footer
             %p.footer-text Made by Austin Liu
