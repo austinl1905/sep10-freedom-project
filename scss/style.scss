@@ -91,20 +91,23 @@ nav {
 .paragraph-text {
     @extend .heading-1;
     font-family: $font-3;
-    font-size: 0.8rem;
+    font-size: 1rem;
     animation: none;
     margin: 0;
+    text-align: map.get($alignments, "left");
+    color: black;
 }
 
 .footer-text {
     @extend .paragraph-text;
+    color: white;
     margin: $center;
+    text-align: map.get($alignments, "center");
 }
 
 .anchor-text {
-    @extend .paragraph-text;
+    @extend .footer-text;
     text-decoration: none;
-    margin: $center;
 }
 
 .content {
@@ -129,9 +132,9 @@ nav {
 	color: rgba(black, .7);
 	border-left: 2px solid $border-color;
 
-	p {
-		font-size: 1rem;
-	}
+    ul {
+        list-style-type: circle;
+    }
 
 	&::before {
 		content: attr(field);
@@ -161,6 +164,13 @@ nav {
 	&:last-child {
 		border-image: $nth-child-gradient;
 	}
+}
+
+.content-image {
+    border: 3px solid gray;
+    margin-bottom: 0.5em;
+    max-width: 80vw;
+    height: auto;
 }
 
 .footer {

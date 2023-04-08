@@ -10,6 +10,11 @@ $font-size-large: 64px;
 $font-size-medium: 32px;
 $font-size-small: 16px;
 
+@mixin timeline-header-style {
+    font-size: 2rem;
+	margin-bottom: .5em;
+}
+
 $weights: (
     "thin": 300,
     "normal": 400,
