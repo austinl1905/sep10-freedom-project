@@ -173,7 +173,7 @@ nav {
     height: auto;
 }
 
-.footer {
+.footer { 
     @extend .header;
     grid-row: 4/5;
     height: map.get($heights, "footer");
