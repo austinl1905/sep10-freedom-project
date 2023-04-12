@@ -25,7 +25,8 @@ $box: (
     ),
 
     "gaps": (
-        "col": 35px
+        "col": 35px,
+        "row": 50px
     )
 );
 
@@ -118,6 +119,22 @@ nav {
 .part-a {
     max-width: map.get($widths, "xllarge");
     margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto, 1fr;
+        row-gap: map.get($box, "gaps", "row");
+    }
+}
+
+.timeline-container {
+    grid-column: 1/2;
+
+    @media screen and (max-width: 800px) {
+        grid-row: 2/3;
+    }
 }
 
 .timeline-heading {
