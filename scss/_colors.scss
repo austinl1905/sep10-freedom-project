@@ -9,7 +9,9 @@ $background-colors: (
     )
 );
 
-$border-color: rgba(black, .3);
+$border-1: rgba(black, .3);
+$border-2: 3px solid gray;
+
 
 @mixin gradient {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../imgs/underwater.png");
@@ -18,7 +20,7 @@ $border-color: rgba(black, .3);
     background-size: cover;
 }
 
-$nth-child-gradient: linear-gradient(to bottom, $border-color 60%,rgba($border-color, 0)) 1 100%;
+$nth-child-gradient: linear-gradient(to bottom, $border-1 60%,rgba($border-1, 0)) 1 100%;
 
 
 

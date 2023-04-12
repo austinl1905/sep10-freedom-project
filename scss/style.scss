@@ -130,7 +130,7 @@ nav {
 	padding: 3em 2em 2em;
 	position: relative;
 	color: rgba(black, .7);
-	border-left: 2px solid $border-color;
+	border-left: 2px solid $border-1;
 
     ul {
         list-style-type: circle;
@@ -157,7 +157,7 @@ nav {
 		left: -7px;
 		border-radius: 10px;
 		content: '';
-		border: 2px solid $border-color;
+		border: 2px solid $border-1;
 		background: white;
 	}
 
@@ -167,13 +167,14 @@ nav {
 }
 
 .content-image {
-    border: 3px solid gray;
+    border: $border-2;
     margin-bottom: 0.5em;
     max-width: 80vw;
     height: auto;
+    width: 250px;
 }
 
-.footer { 
+.footer {
     @extend .header;
     grid-row: 4/5;
     height: map.get($heights, "footer");
