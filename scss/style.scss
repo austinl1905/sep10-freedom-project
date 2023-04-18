@@ -1,4 +1,5 @@
 @use 'sass:map' as map;
+@use 'sass:color' as color;
 @import 'fonts';
 @import 'colors';
 
@@ -39,7 +40,7 @@ $center: 0 auto 0 auto;
 
 body {
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto auto;
     padding: 0;
     margin: 0;
 }
@@ -111,16 +112,21 @@ nav {
     text-decoration: none;
 }
 
-.content {
+.content-1 {
     grid-row: 3/4;
     background-color: map.get($background-colors, "Blue", "Light");
+}
+
+.content-2 {
+    grid-row: 4/5;
+    background-color: color.adjust(map.get($background-colors, "Blue", "Light"), $lightness: -30%);
 }
 
 .part-a {
     max-width: map.get($widths, "xllarge");
     margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 7fr 3fr;
 
     @media screen and (max-width: 800px) {
         grid-template-columns: auto;
@@ -149,6 +155,11 @@ nav {
     @media screen and (max-width: 800px) {
         grid-column: 1/2;
     }
+}
+
+.part-b-heading {
+    @extend .part-a-heading;
+    margin-bottom: map.get($box, "margins", "med");
 }
 
 .timeline-heading {
@@ -205,9 +216,14 @@ nav {
     width: 250px;
 }
 
+.part-b {
+    max-width: map.get($widths, "xllarge");
+    margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+}
+
 .footer {
     @extend .header;
-    grid-row: 4/5;
+    grid-row: 5/6;
     height: map.get($heights, "footer");
     background-image: none;
     margin-bottom: 0;
