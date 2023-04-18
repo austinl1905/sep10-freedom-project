@@ -10,11 +10,12 @@ $alignments: (
     "center": center,
     "spaceeven": space-evenly,
     "default": stretch,
-    "left": left
+    "left": left,
+    "right": right
 );
 
 $heights: ("footer": 250px);
-$widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%);
+$widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%, "half": 50%);
 $box: (
     "margins": (
         "med": 100px
@@ -81,7 +82,7 @@ body {
     animation: fadein 4s;
 
     @media screen and (max-width: 414px) {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
 
@@ -119,22 +120,28 @@ nav {
 .part-a {
     max-width: map.get($widths, "xllarge");
     margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
 
-    @media screen and (max-width: 800px) {
-        grid-template-columns: auto;
-        grid-template-rows: auto, 1fr;
-        row-gap: map.get($box, "gaps", "row");
-    }
+    // @media screen and (max-width: 800px) {
+    //     grid-template-columns: auto;
+    //     grid-template-rows: auto, 1fr;
+    //     row-gap: map.get($box, "gaps", "row");
+    // }
+}
+
+.part-b {
+    margin: 0 auto map.get($box, "margins", "med") auto;
+
 }
 
 .timeline-container {
-    grid-column: 1/2;
+    // grid-column: 1/2;
 
-    @media screen and (max-width: 800px) {
-        grid-row: 2/3;
-    }
+    // @media screen and (max-width: 800px) {
+    //     grid-row: 2/3;
+    // }
+    margin: $center;
 }
 
 .part-a-heading {
@@ -142,30 +149,76 @@ nav {
     color: black;
     font-size: 2.5rem;
     animation: none;
-    grid-row: 1/2;
-    grid-column: 2/3;
+    margin-bottom: map.get($box, "margins", "med");
+    // grid-row: 1/2;
+    // grid-column: 2/3;
 
 
-    @media screen and (max-width: 800px) {
-        grid-column: 1/2;
-    }
+    // @media screen and (max-width: 800px) {
+    //     grid-column: 1/2;
+    // }
 }
 
 .timeline-heading {
-    font-family: $font-1;
     @include timeline-header-style;
     text-align: map.get($alignments, "left");
 }
 
-.timeline-item {
-	padding: 3em 2em 2em;
-	position: relative;
-	color: rgba(black, .7);
-	border-left: 2px solid $border-1;
+@mixin timeline-item-properties {
 
     ul {
         list-style-type: circle;
+        direction: ltr;
     }
+
+    width: map.get($widths, "half");
+    padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+}
+
+.timeline-item:nth-of-type(odd) {
+    margin-right: auto;
+    border-right: 2px solid $border-1;
+    border-left: none;
+
+    @include timeline-item-properties;
+
+    &::after {
+		content: attr(field);
+		position: absolute;
+		left: 2em;
+		font-weight: bold;
+		top: 1em;
+		display: block;
+		font-family: $font-4;
+		font-weight: 700;
+		font-size: .785rem;
+	}
+
+	&::before {
+		width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -4px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid $border-1;
+		background: white;
+	}
+
+	&:last-child {
+		border-image: $nth-child-gradient;
+	}
+}
+
+.timeline-item:nth-of-type(even) {
+    @include timeline-item-properties;
+	border-left: 2px solid $border-1;
+    margin-left: auto;
+    left: -1px;
 
 	&::before {
 		content: attr(field);
