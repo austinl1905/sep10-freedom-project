@@ -28,6 +28,10 @@ $box: (
     "gaps": (
         "col": 35px,
         "row": 50px
+    ),
+
+    "paddings": (
+        "small": 20px
     )
 );
 
@@ -119,7 +123,11 @@ nav {
 
 .content-2 {
     grid-row: 4/5;
-    background-color: color.adjust(map.get($background-colors, "Blue", "Light"), $lightness: -30%);
+    background-color: color.adjust(map.get($background-colors, "Blue", "Light"), $lightness: -50%);
+
+    // & > .paragraph-text {
+    //     color: white;
+    // }
 }
 
 .part-a {
@@ -160,6 +168,21 @@ nav {
 .part-b-heading {
     @extend .part-a-heading;
     margin-bottom: map.get($box, "margins", "med");
+    color: white;
+}
+
+.part-b-container {
+    width: map.get($widths, "xllarge");
+    background-color: white;
+    border-radius: map.get($box, "borders", "radius");
+    padding: map.get($box, "paddings", "small");
+    margin: $center;
+}
+
+.part-b-inner {
+    @extend .part-b-container;
+    box-shadow: $box-shadow-1;
+    width: map.get($widths, "full");
 }
 
 .timeline-heading {

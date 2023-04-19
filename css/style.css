@@ -94,7 +94,7 @@ nav {
 
 .content-2 {
   grid-row: 4/5;
-  background-color: #28aaf6;
+  background-color: #0872b0;
 }
 
 .part-a {
@@ -135,6 +135,20 @@ nav {
 
 .part-b-heading {
   margin-bottom: 100px;
+  color: white;
+}
+
+.part-b-container, .part-b-inner {
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto 0 auto;
+}
+
+.part-b-inner {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
 }
 
 .timeline-heading {

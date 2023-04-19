@@ -21,10 +21,10 @@
                         %li.nav-item
                             %a.active.nav-link.anchor-text{:aria => "page", :href => "#header"}Top
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#part-a"}Current Innovations
+                            %a.nav-link.anchor-text{:href => "#1"}Current Innovations
                         %li.nav-item
-                            %a.nav-link.anchor-text{:href => "#part-b"}Future Innovations
-        .content-1
+                            %a.nav-link.anchor-text{:href => "#2"}Future Innovations
+        .content-1#1
             .part-a#part-a
                 .part-a-heading A Look at the Many Innovations in Oceanography
                 .timeline-container
@@ -102,9 +102,12 @@
                                 %p.paragraph-text However, the MOCNESS still has limitations. It can only be used in open waters, requiring different devices for the ocean floor or reefs. The net also tends to move slowly, allowing some larger planktons to escape.
                             %li
                                 %p.paragraph-text More information on MOCNESS <a target="_blank" href="https://www.whoi.edu/what-we-do/explore/instruments/instruments-sensors-samplers/mocness/">here</a>.
-        .content-2
+        .content-2#2
             .part-b#part-b
                 .part-b-heading A Potential Innovation for the Future of Oceanography
+                .part-b-container
+                    .part-b-inner
+                        %p.paragraph-text Context: The main reason that light cannot reach the bottom of the ocean is because water will just scatter and absorb the particles to the point where they are so scattered apart that the ocean becomes pitch black. This is caused by light attenuation, which is a decrease in intensity caused when the depth of the water also increases.
 
         .footer
             %p.footer-text Made by Austin Liu
