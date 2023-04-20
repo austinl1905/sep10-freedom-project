@@ -147,8 +147,17 @@ nav {
 }
 
 .part-b-inner {
+  background-color: snow;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
+}
+.part-b-inner h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75em;
+  font-family: "Fjalla One", sans-serif;
+}
+.part-b-inner h5 {
+  margin-top: 0.5em;
 }
 
 .timeline-heading {
@@ -196,7 +205,7 @@ nav {
 
 .content-image {
   border: 3px solid gray;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   max-width: 80vw;
   height: auto;
   width: 250px;
@@ -205,6 +214,19 @@ nav {
 .part-b {
   max-width: 90%;
   margin: 100px auto 100px auto;
+}
+
+.part-b-list {
+  direction: ltr;
+  margin-top: 1em;
+  list-style-type: square;
+}
+
+.icon {
+  width: 45px;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto 0 auto;
 }
 
 .footer {

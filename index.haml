@@ -6,7 +6,7 @@
         %link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
         %link{:rel => "icon", :href => "imgs/ca_10.png", :type => "image/x-icon"}
         -# %style *{border-style: dashed;}
-        %title Title
+        %title SEP10 Project
         %link{:href => "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css", :rel => "stylesheet", :integrity => "sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ", :crossorigin => "anonymous"}
     %body
         .header#header
@@ -24,6 +24,8 @@
                             %a.nav-link.anchor-text{:href => "#1"}Current Innovations
                         %li.nav-item
                             %a.nav-link.anchor-text{:href => "#2"}Future Innovations
+                        %li.nav-item
+                            %a.nav-link.anchor-text{:href => "https://github.com/austinl1905/sep10-freedom-project", :target => "_blank"}Website Repo
         .content-1#1
             .part-a#part-a
                 .part-a-heading A Look at the Many Innovations in Oceanography
@@ -107,10 +109,29 @@
                 .part-b-heading A Potential Innovation for the Future of Oceanography
                 .part-b-container
                     .part-b-inner
-                        %p.paragraph-text Context: The main reason that light cannot reach the bottom of the ocean is because water will just scatter and absorb the particles to the point where they are so scattered apart that the ocean becomes pitch black. This is caused by light attenuation, which is a decrease in intensity caused when the depth of the water also increases.
-
+                        %h2 My Proposal: A Device That Produces Water Resistant Photons
+                        %p.paragraph-text <span style="font-weight: 700;">Context:</span> The main reason that light cannot reach the bottom of the ocean is because water will just scatter and absorb the particles to the point where they are so scattered apart that the ocean becomes pitch black. This is caused by light attenuation, which is a decrease in intensity caused when the depth of the water also increases.
+                        %h5 What makes this different from current technology?
+                        %ul.part-b-list
+                            %li
+                                %p.paragraph-text While we <span style="font-weight: 700;">do</span> have LED lights on submarines, they only illuminate what is immediately in front of the submarine, which is one of the main reasons exploring the deep ocean is extremely difficult.
+                            %li
+                                %p.paragraph-text By producing water resistant photons, the light will be more resistant to the water that would normally absorb it within the first few meters. It may not be able to produce electromagnetic radiation with complete water resistance, but it will far surpass the technology we currently have.
+                            %li
+                                %p.paragraph-text This device can help with navigating the ocean as well. Even though submarines are equipped with navigation equipment or topographic maps of the ocean, it can still be hard for oceanographers to tell where they are in relation to the map. Essentially, trying to do something relatively simple like finding a spot where a submarine previously was can be tedious and nightmarish, and comparable to trying to find a needle in a haystack. This device can act as a “beacon” that utilizes the map in order to guide submarines to where they need to navigate.
+                            %li
+                                %p.paragraph-text The device uses red light instead of blue-green light. Although blue-green light has a shorter wavelength and can therefore penetrate more water, it is much more intense and can harm marine animals which don’t normally see light in their lifetime and have a hard time adjusting to it. Red light is used by deep-sea explorers now because it gets absorbed first, and the majority of deep-sea fish don’t even have the photoreceptors that allow them to process red light.
+                            %li
+                                %p.paragraph-text This device will not only illuminate what is directly in front of the submarine, but will be able to both “focus” on a specific area (which can be up close or a few hundred meters away) and will be able to show the surroundings of the submarine, making exploration much easier since researchers will no longer be almost completely surrounded by complete darkness.
+                            %li
+                                %p.paragraph-text This device will also be compatible with ROVs (Remotely Operated Vehicle) and AUVs (Autonomous Underwater Vehicles), you would just attach it to the robot and then the person piloting it will be able to control when the light is turned on and where it shines. Video cameras can be mounted on top of the device to record anything that comes into view. Since the light produced by the device can penetrate much farther than conventional LED lights used by submarines right now, we will be able to record much more and potentially discover more marine species.
+                            %li
+                                %p.paragraph-text The device runs on a battery with especially high capacity so oceanographers can record more data and keep the device on for longer without having to resurface. Almost all electronics on submarines run on batteries, and this won’t be an exception since it's the only really viable way to store electricity on a submarine. Unfortunately, there are no renewable sources of energy four thousand fathoms underwater!
+                            %li
+                                %p.paragraph-text Also, this idea may seem completely ridiculous and probably will not become a reality in our lifetime. Guess what? I don't care.
         .footer
             %p.footer-text Made by Austin Liu
+            %img.icon{:src => "imgs/ca9.png"}
             %button.button{:type => "button"}
                 %a.anchor-text{:href => "#header"}To Top
         %script{:src => "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js", :integrity => "sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe", :crossorigin => "anonymous"}

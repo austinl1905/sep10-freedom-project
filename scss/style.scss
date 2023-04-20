@@ -181,8 +181,19 @@ nav {
 
 .part-b-inner {
     @extend .part-b-container;
+    background-color: snow;
     box-shadow: $box-shadow-1;
     width: map.get($widths, "full");
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 0.75em;
+        font-family: $font-1;
+    }
+
+    h5 {
+        margin-top: 0.5em;
+    }
 }
 
 .timeline-heading {
@@ -233,7 +244,7 @@ nav {
 
 .content-image {
     border: $border-2;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     max-width: 80vw;
     height: auto;
     width: 250px;
@@ -242,6 +253,19 @@ nav {
 .part-b {
     max-width: map.get($widths, "xllarge");
     margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
+}
+
+.part-b-list {
+    direction: ltr;
+    margin-top: 1em;
+    list-style-type: square;
+}
+
+.icon {
+    width: 45px;
+    height: auto;
+    border-radius: 5px;
+    margin: $center;
 }
 
 .footer {
