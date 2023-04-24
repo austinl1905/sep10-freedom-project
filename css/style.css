@@ -219,7 +219,7 @@ nav {
 .part-b-list {
   direction: ltr;
   margin-top: 1em;
-  list-style-type: square;
+  list-style-type: F square;
 }
 
 .icon {
@@ -266,12 +266,10 @@ nav {
   transform: translateY(100px);
   opacity: 0;
   transition: 1.5s all ease;
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
 }
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
-  border-image: none;
 }
 
 /*# sourceMappingURL=style.css.map */
