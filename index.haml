@@ -30,7 +30,7 @@
             .part-a#part-a
                 .part-a-heading A Look at the Many Innovations in Oceanography
                 .timeline-container
-                    .timeline-item{:field => "Data"}
+                    .timeline-item.reveal{:field => "Data"}
                         %h1.timeline-heading Distributed Oceanographic Data System (DODS)
                         %ul
                             %li
@@ -45,7 +45,7 @@
                                 %p.paragraph-text Used by large organizations such as NASA and NOAA to help store historical data, satellite imagery, and real time oceanographic data recorded by ocean observing systems.
                             %li
                                 %p.paragraph-text Pictures? Sorry, this innovation is just really obscure. More information can be found <a target="_blank" href="https://online.infobase.com/HRC/Search/Details/8?articleId=274761&q=%20oceanography%">here</a> though.
-                    .timeline-item{:field => "Acoustical Oceanography"}
+                    .timeline-item.reveal{:field => "Acoustical Oceanography"}
                         %h1.timeline-heading Sonar
                         %ul
                             %li
@@ -58,7 +58,7 @@
                                 %p.paragraph-text Used by oceanographers for ocean navigation and mapping the seafloor.
                             %li
                                 %p.paragraph-text More information on sonars <a target="_blank" href="https://online.infobase.com/HRC/Search/Details/8?articleId=273600&q">here</a>.
-                    .timeline-item{:field => "Physical Oceanography"}
+                    .timeline-item.reveal{:field => "Physical Oceanography"}
                         %h1.timeline-heading Ocean Remote Sensing
                         %img.content-image{:src => "imgs/oceanremotesensing.png", :alt => "ocean remote sensing"}
                         %ul
@@ -74,7 +74,7 @@
                                 %p.paragraph-text Data collected by these tools can be processed with remote sensing software to generate information from sensors
                             %li
                                 %p.paragraph-text More information on Ocean Remote Sensing <a target="_blank" href="https://online.infobase.com/HRC/Search/Details/8?articleId=273530&q">here</a>.
-                    .timeline-item{:field => "Physical Oceanography"}
+                    .timeline-item.reveal{:field => "Physical Oceanography"}
                         %h1.timeline-heading TowCam
                         %img.content-image{:src => "imgs/TowCam.jpg", :alt => "TowCam"}
                         %ul
@@ -90,7 +90,7 @@
                                 %p.paragraph-text After each “tow”, the data is immediately processed and is ready to be analyzed and configured. This makes the data very easy to review and upload.
                             %li
                                 %p.paragraph-text More information on the TowCam <a target="_blank" href="https://www2.whoi.edu/site/miso/miso-instrumentation/towcam/">here</a>.
-                    .timeline-item{:field => "Fishing"}
+                    .timeline-item.reveal{:field => "Fishing"}
                         %h1.timeline-heading MOCNESS
                         %img.content-image{:src => "imgs/MOCNESS.jpg", :alt => "MOCNESS fishing net"}
                         %ul
@@ -132,6 +132,7 @@
         .footer
             %p.footer-text Made by Austin Liu
             %img.icon{:src => "imgs/ca9.png", :alt => "a rather angry looking cat"}
-            %button.button.hvr-fade{:type => "button"}
+            %button.button{:type => "button"}
                 %a.anchor-text{:href => "#header"}To Top
         %script{:src => "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js", :integrity => "sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe", :crossorigin => "anonymous"}
+        %script{:src => "script.js"}

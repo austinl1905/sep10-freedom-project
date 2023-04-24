@@ -277,7 +277,7 @@ nav {
     background-color: map.get($background-colors, "Blue", "Dark");
 }
 
-.hvr-fade {
+@mixin hvr-fade {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -299,9 +299,22 @@ nav {
 }
 
 .button {
+    @include hvr-fade;
     margin: $center;
     border: 1px solid white;
     background-color: transparent;
     border-radius: map.get($box, "borders", "radius");
     padding: map.get($box, "borders", "radius");
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1.5s all ease;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
