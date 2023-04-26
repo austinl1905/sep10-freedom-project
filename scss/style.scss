@@ -67,6 +67,7 @@ body {
 
 .heading-1 {
     font-family: $font-1;
+    // font-family: 'EB Garamond', serif;
     color: white;
     font-size: $font-size-large;
     margin: $center;
@@ -75,7 +76,7 @@ body {
     max-width: map.get($widths, "xxlarge");
 
     @media screen and (max-width: 414px) {
-        font-size: 9vw;
+        font-size: 12vw;
     }
 }
 
@@ -119,6 +120,7 @@ nav {
 .content-1 {
     grid-row: 3/4;
     background-color: map.get($background-colors, "Blue", "Light");
+    // background-color: white;
 }
 
 .content-2 {
@@ -153,12 +155,11 @@ nav {
 
 .part-a-heading {
     @extend .heading-1;
-    color: black;
+    color: map.get($background-colors, "Black", "Dark");
     font-size: 2.5rem;
     animation: none;
     grid-row: 1/2;
     grid-column: 2/3;
-
 
     @media screen and (max-width: 800px) {
         grid-column: 1/2;
@@ -189,6 +190,7 @@ nav {
         font-size: 1.75rem;
         margin-bottom: 0.75em;
         font-family: $font-1;
+        color: map.get($background-colors, "Black", "Dark");
     }
 
     h5 {
@@ -205,7 +207,7 @@ nav {
 .timeline-item {
 	padding: 3em 2em 2em;
 	position: relative;
-	color: rgba(black, .7);
+	color: map.get($background-colors, "Black", "Dark");
 	border-left: 2px solid $border-1;
 
     ul {
@@ -258,7 +260,7 @@ nav {
 .part-b-list {
     direction: ltr;
     margin-top: 1em;
-    list-style-type:F square;
+    list-style-type: square;
 }
 
 .icon {
