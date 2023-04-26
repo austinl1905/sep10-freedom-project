@@ -39,7 +39,7 @@ body {
   }
 }
 
-.heading-1, .part-a-heading, .part-b-heading, .paragraph-text, .footer-text, .anchor-text, .heading-2 {
+.heading-1, .part-a-heading, .part-b-heading, .context h2, .paragraph-text, .footer-text, .anchor-text, .heading-2 {
   font-family: "Fjalla One", sans-serif;
   color: white;
   font-size: 64px;
@@ -48,7 +48,7 @@ body {
   animation: fadein 2s;
 }
 @media screen and (max-width: 414px) {
-  .heading-1, .part-a-heading, .part-b-heading, .paragraph-text, .footer-text, .anchor-text, .heading-2 {
+  .heading-1, .part-a-heading, .part-b-heading, .context h2, .paragraph-text, .footer-text, .anchor-text, .heading-2 {
     font-size: 12vw;
   }
 }
@@ -87,6 +87,17 @@ nav {
   text-decoration: none;
 }
 
+.context {
+  text-align: center !important;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.context h2 {
+  margin-bottom: 1.25em;
+}
+
 .content-1 {
   grid-row: 3/4;
   background-color: #BBE4FC;
@@ -120,7 +131,7 @@ nav {
   }
 }
 
-.part-a-heading, .part-b-heading {
+.part-a-heading, .part-b-heading, .context h2 {
   color: rgba(0, 0, 0, 0.7);
   font-size: 2.5rem;
   animation: none;
@@ -128,7 +139,7 @@ nav {
   grid-column: 2/3;
 }
 @media screen and (max-width: 800px) {
-  .part-a-heading, .part-b-heading {
+  .part-a-heading, .part-b-heading, .context h2 {
     grid-column: 1/2;
   }
 }
