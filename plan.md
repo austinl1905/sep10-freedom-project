@@ -21,12 +21,12 @@ These are just the wireframes for the MVP. The final website could end up lookin
 
 ### Beyond MVP (the cool stuff)
 
-- Card timeline thingy that uses keyframes and maybe JS to fade in on scroll
+- Card timeline thingy that uses keyframes and maybe JS to fade in on scroll (done)
 - Cool hero (Done!!!!)
-- maybe hide a cat picture here and there
-- maybe my own components
+- maybe hide a cat picture here and there (done)
+- maybe my own components (done)
 - vertical navbar? (everytime I try to do this I fail because I can't figure out how to make it responsive :sob:)
-- sass modules for some cool dark magic esque preprocessing stuff
+- sass modules for some cool dark magic esque preprocessing stuff (maybe)
 
 ## Timeline
 
