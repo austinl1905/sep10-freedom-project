@@ -75,6 +75,7 @@ nav {
   margin: 0;
   text-align: left;
   color: black;
+  line-height: 1.75;
 }
 
 .footer-text, .anchor-text {
@@ -155,6 +156,11 @@ nav {
   border-radius: 5px;
   padding: 20px;
   margin: 0 auto 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .part-b-container, .part-b-inner {
+    width: 100%;
+  }
 }
 
 .part-b-inner {
