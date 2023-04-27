@@ -70,7 +70,7 @@ nav {
 
 .paragraph-text, .footer-text, .anchor-text {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   animation: none;
   margin: 0;
   text-align: left;
@@ -171,6 +171,9 @@ nav {
 .part-b-inner h5 {
   margin-top: 0.5em;
 }
+.part-b-inner li {
+  margin-top: 0.5em;
+}
 
 .timeline-heading {
   font-family: "Fjalla One", sans-serif;
@@ -187,6 +190,9 @@ nav {
 }
 .timeline-item ul {
   list-style-type: circle;
+}
+.timeline-item ul > li {
+  margin-top: 0.5em;
 }
 .timeline-item::before {
   content: attr(field);

@@ -18,7 +18,10 @@ $heights: ("footer": 250px);
 $widths: ("full": 100%, "xllarge": 90%, "xlarge": 80%);
 $box: (
     "margins": (
-        "med": 100px
+        "med": 100px,
+        "responsive-1": 0.5em,
+        "responsive-2": 0.75em,
+        "responsive-3": 1.25em
     ),
 
     "borders": (
@@ -98,7 +101,7 @@ nav {
 .paragraph-text {
     @extend .heading-1;
     font-family: $font-3;
-    font-size: 1rem;
+    font-size: 1.1rem;
     animation: none;
     margin: 0;
     text-align: map.get($alignments, "left");
@@ -126,7 +129,7 @@ nav {
 
     h2 {
         @extend .part-a-heading;
-        margin-bottom: 1.25em;
+        margin-bottom: map.get($box, "margins", "responsive-3");
     }
 }
 
@@ -201,13 +204,17 @@ nav {
 
     h2 {
         font-size: 1.75rem;
-        margin-bottom: 0.75em;
+        margin-bottom: map.get($box, "margins", "responsive-2");
         font-family: $font-1;
         color: map.get($background-colors, "Black", "Dark");
     }
 
     h5 {
-        margin-top: 0.5em;
+        margin-top: map.get($box, "margins", "responsive-1");
+    }
+
+    li {
+        margin-top: map.get($box, "margins", "responsive-1");
     }
 }
 
@@ -225,6 +232,10 @@ nav {
 
     ul {
         list-style-type: circle;
+
+        & > li {
+            margin-top: map.get($box, "margins", "responsive-1");
+        }
     }
 
 	&::before {
