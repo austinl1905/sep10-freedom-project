@@ -114,7 +114,7 @@ nav {
   max-width: 90%;
   margin: 100px auto 100px auto;
   display: grid;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 8fr 2fr;
 }
 @media screen and (max-width: 800px) {
   .part-a {
@@ -230,10 +230,11 @@ nav {
 
 .content-image {
   border: 3px solid gray;
-  margin-bottom: 1em;
-  max-width: 80vw;
+  margin: 0 1em 1em 1em;
+  max-width: 35vw;
   height: auto;
   width: 250px;
+  float: right;
 }
 
 .part-b {

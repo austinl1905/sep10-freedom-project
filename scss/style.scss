@@ -21,7 +21,8 @@ $box: (
         "med": 100px,
         "responsive-1": 0.5em,
         "responsive-2": 0.75em,
-        "responsive-3": 1.25em
+        "responsive-3": 1em,
+        "responsive-4": 1.25em
     ),
 
     "borders": (
@@ -131,7 +132,7 @@ nav {
 
     h2 {
         @extend .part-a-heading;
-        margin-bottom: map.get($box, "margins", "responsive-3");
+        margin-bottom: map.get($box, "margins", "responsive-4");
     }
 }
 
@@ -154,7 +155,7 @@ nav {
     max-width: map.get($widths, "xllarge");
     margin: map.get($box, "margins", "med") auto map.get($box, "margins", "med") auto;
     display: grid;
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 8fr 2fr;
 
     @media screen and (max-width: 800px) {
         grid-template-columns: auto;
@@ -249,7 +250,7 @@ nav {
 		position: absolute;
 		left: 2em;
 		font-weight: bold;
-		top: 1em;
+		top: map.get($box, "margins", "responsive-3");
 		display: block;
 		font-family: $font-4;
 		font-weight: 700;
@@ -260,7 +261,7 @@ nav {
 		width: 10px;
 		height: 10px;
 		display: block;
-		top: 1em;
+		top: map.get($box, "margins", "responsive-3");
 		position: absolute;
 		left: -7px;
 		border-radius: 10px;
@@ -276,10 +277,11 @@ nav {
 
 .content-image {
     border: $border-2;
-    margin-bottom: 1em;
-    max-width: 80vw;
+    margin: 0 map.get($box, "margins", "responsive-3") map.get($box, "margins", "responsive-3") map.get($box, "margins", "responsive-3");
+    max-width: 35vw;
     height: auto;
     width: 250px;
+    float: right;
 }
 
 .part-b {
